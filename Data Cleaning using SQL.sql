@@ -3,7 +3,7 @@
 SELECT *
 FROM Portfolio.dbo.NashvilleHousing
 
-----Stanadardizing data format 
+----Standardizing data format 
 
 SELECT SaleDate, CONVERT(Date,SaleDate)
 FROM Portfolio.dbo.NashvilleHousing
@@ -36,6 +36,7 @@ FROM Portfolio.dbo.NashvilleHousing
 ORDER BY ParcelID
 
 -- Creating a join with the same table as there is a relation between parcel Id and property address and so we can populate the null values in address
+	
 SELECT a.ParcelID ,a.PropertyAddress, b.ParcelID, b.PropertyAddress
 FROM Portfolio.dbo.NashvilleHousing a
 JOIN Portfolio.dbo.NashvilleHousing b
@@ -176,10 +177,6 @@ Select *
 From Portfolio.dbo.NashvilleHousing
 
 
-
-
----------------------------------------------------------------------------------------------------------
-
 -- Delete Unused Columns
 
 
@@ -190,7 +187,7 @@ From Portfolio.dbo.NashvilleHousing
 ALTER TABLE Portfolio.dbo.NashvilleHousing
 DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress, SaleDate
 
-
+---- Now the duplicates and bad data is eliminated , can be used for further analysis .
 
 
 
