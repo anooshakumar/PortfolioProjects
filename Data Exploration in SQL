@@ -1,9 +1,8 @@
-/*
-Covid 19 Data Exploration 
 
-Skills used: Joins, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+-- Covid 19 Data Exploration 
 
-*/
+--Skills used: Joins, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
 
 SELECT *
 FROM Portfolio.dbo.CovidDeaths
@@ -143,6 +142,7 @@ JOIN Portfolio.dbo.CovidVaccinations vac
 on dea.location = vac.location and dea.date = vac.date 
 WHERE dea.continent is not null
 --ORDER BY 2,3
+
 
 SELECT *
 FROM PercentPopulationVaccinated
